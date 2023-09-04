@@ -1,4 +1,5 @@
 package com.generalassembly;
+import java.util.Scanner;
 /**
  ** Main Class (Client/Driver Class)**
  * Main method and game flow handling.
