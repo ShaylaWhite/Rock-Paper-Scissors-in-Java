@@ -1,0 +1,19 @@
+OOP principles in Rock, Paper, Scissors game:
+
+Inheritance:
+
+Player Class (Abstract Class): Represents a player in the game and serves as the base class for other player types. It embodies inheritance by defining common attributes and methods that are shared by both human and computer players.
+HumanPlayer Class (Subclass of Player): Inherits from the Player class, allowing it to reuse the attributes and methods defined in the Player class while also providing the flexibility to override or extend these methods.
+ComputerPlayer Class (Subclass of Player): Similarly inherits from the Player class, leveraging the common player attributes and methods.
+Encapsulation:
+
+Player Class (Abstract Class): Encapsulates player-specific data (e.g., wins, losses, points) by providing private fields and exposing them through getter and setter methods. This ensures that the internal state of players is hidden and can only be accessed and modified through controlled methods.
+Validator Class (Utility Class): Encapsulates input validation logic by providing methods to validate user input. This hides the validation details from the calling code and promotes code maintainability.
+Polymorphism:
+
+Player Class (Abstract Class): Serves as a base class for different player types (human and computer). This enables polymorphism, as you can create objects of different player types but interact with them through a common Player reference, allowing for flexibility and extensibility in the game logic.
+HumanPlayer Class and ComputerPlayer Class: Both classes provide specific implementations of methods defined in the Player class, showcasing polymorphism in action. For example, they can override the makeMove() method differently to represent human and computer player behaviors.
+Modularity:
+
+GameManager Class (Service/Controller Class): Centralizes game logic, including move comparison and outcome determination. This modular approach separates the game's core functionality from other concerns, promoting easier maintenance and testing.
+GameMenu Class (Service/Controller Class): Manages the main menu and user interaction separately. By isolating menu-related logic, you ensure that the user interface is decoupled from the game mechanics, enhancing modularity.
