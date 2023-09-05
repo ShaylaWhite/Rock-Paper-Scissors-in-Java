@@ -1,4 +1,6 @@
 package com.generalassmbly;
+import java.util.Scanner;
+
 // HumanPlayer.java
 /**
  * HumanPlayer.java
