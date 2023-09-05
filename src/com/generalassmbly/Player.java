@@ -33,3 +33,21 @@ public abstract class Player {
         this.losses = 0;
         this.points = 0;
     }
+
+    // Getter methods for player attributes
+    public String getName() {
+        return name;
+    }
+
+    public int getWins() {
+        return wins;
+    }
+
+    public int getLosses() {
+        return losses;
+    }
+
+    public int getPoints() {
+        return points;
+    }
+}
