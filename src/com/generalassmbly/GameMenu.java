@@ -1,4 +1,6 @@
 package com.generalassmbly;
+import java.util.Scanner;
+
 /**
  * GameMenu.java
  * Manages the main menu and user interactions for the Rock, Paper, Scissors game.
