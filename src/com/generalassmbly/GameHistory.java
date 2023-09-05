@@ -6,4 +6,8 @@ package com.generalassmbly;
  * Usage of OOP: Encapsulation (data hiding), Data structure (e.g., ArrayList).
  */
 public class GameHistory {
+    private List<String> history;
+
+    public GameHistory() {
+        history = new ArrayList<>();
 }
