@@ -1,102 +1,45 @@
-package com.generalassmbly;
-/**
- * GameManager.java
- * Manages the core game logic for the Rock, Paper, Scissors game.
- */
 public class GameManager {
-    private Player humanPlayer;
-    private Player computerPlayer;
+    private Player player1;
+    private Player player2;
     private GameHistory gameHistory;
     private Validator validator;
-    /**
-     * Constructor to initialize the GameManager.
-     *
-     * @param humanPlayer   The human player object.
-     * @param computerPlayer The computer player object.
-     * @param gameHistory   The game history manager.
-     * @param validator     The input validator.
-     */
-    // Constructor
-    public GameManager(Player humanPlayer, Player computerPlayer, GameHistory gameHistory, Validator validator) {
-        this.humanPlayer = humanPlayer;
-        this.computerPlayer = computerPlayer;
+
+    public GameManager(Player player1, Player player2, GameHistory gameHistory, Validator validator) {
+        this.player1 = player1;
+        this.player2 = player2;
         this.gameHistory = gameHistory;
         this.validator = validator;
     }
-    /**
-     * Plays a single round of the Rock, Paper, Scissors game.
-     * It gets moves from the players, determines the winner, updates scores,
-     * records the game outcome, and displays the result to the players.
-     */
 
-    // Play Game Method used in the called in GameMenu class
     public void playGame() {
-        // Get moves from the players
-        String humanMove = humanPlayer.makeMove();
-        String computerMove = computerPlayer.makeMove();
+        // Get moves from both human players
+        String move1 = player1.makeMove();
+        String move2 = player2.makeMove();
 
         // Determine the winner
-        String result = determineWinner(humanMove, computerMove);
+        String result = determineWinner(move1, move2);
 
         // Update player scores
         updateScores(result);
 
         // Record the game outcome in the game history
-        gameHistory.recordGameResult(humanPlayer.getName(), computerPlayer.getName(), result);
+        gameHistory.recordGameResult(player1.getName(), player2.getName(), result);
 
         // Display the game result to the players
-        displayGameResult(humanMove, computerMove, result);
-    }
-    /**
-     * Determines the winner based on the moves.
-     *
-     * @param humanMove    The move made by the human player.
-     * @param computerMove The move made by the computer player.
-     * @return A string indicating the result: "tie," "win," or "lose."
-     */
-    private String determineWinner(String humanMove, String computerMove) {
-        if (humanMove.equals(computerMove)) {
-            return "tie";
-        } else if ((humanMove.equals("rock") && computerMove.equals("scissors")) ||
-                (humanMove.equals("scissors") && computerMove.equals("paper")) ||
-                (humanMove.equals("paper") && computerMove.equals("rock"))) {
-            return "win";
-        } else {
-            return "lose";
-        }
+        displayGameResult(move1, move2, result);
     }
 
-    /**
-     * Updates player scores based on the game result.
-     *
-     * @param result The game result: "win," "lose," or "tie."
-     */    private void updateScores(String result) {
-        if (result.equals("win")) {
-            humanPlayer.incrementWins();
-            computerPlayer.incrementLosses();
-        } else if (result.equals("lose")) {
-            humanPlayer.incrementLosses();
-            computerPlayer.incrementWins();
-        } // In case of a tie, scores remain unchanged
+    private String determineWinner(String move1, String move2) {
+        // Implement logic to determine the winner between two human players
+        // For example, you can compare move1 and move2 and return "win," "lose," or "tie"
+        // based on the rules of Rock-Paper-Scissors.
     }
 
-    /**
-     * Displays the game result to the players.
-     *
-     * @param humanMove    The move made by the human player.
-     * @param computerMove The move made by the computer player.
-     * @param result       The game result: "tie," "win," or "lose."
-     */
-    private void displayGameResult(String humanMove, String computerMove, String result) {
-        System.out.println("You chose: " + humanMove);
-        System.out.println("Computer chose: " + computerMove);
+    private void updateScores(String result) {
+        // Implement logic to update scores for both players based on the game result.
+    }
 
-        if (result.equals("tie")) {
-            System.out.println("It's a tie!");
-        } else if (result.equals("win")) {
-            System.out.println("You win!");
-        } else {
-            System.out.println("Computer wins!");
-        }
+    private void displayGameResult(String move1, String move2, String result) {
+        // Implement logic to display the game result to the players.
     }
 }
