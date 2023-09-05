@@ -29,4 +29,21 @@ public class GameMenu {
         System.out.print("\nEnter your choice: ");
         return scanner.nextLine().toLowerCase();
     }
+}  // Handle user choices
+    public void handleUserChoice(String userInput) {
+        switch (userInput) {
+            case "play":
+                gameManager.playGame();
+                break;
+            case "history":
+                gameManager.displayGameHistory();
+                break;
+            case "quit":
+                System.out.println("Thanks for playing!");
+                System.exit(0); // Terminate the program
+                break;
+            default:
+                System.out.println("Invalid choice. Please try again.");
+        }
+    }
 }
