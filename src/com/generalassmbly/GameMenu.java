@@ -24,4 +24,9 @@ public class GameMenu {
         System.out.println("2. Type 'history' to view your game history.");
         System.out.println("3. Type 'quit' to stop playing.");
     }
+    // Get user input
+    public String getUserInput() {
+        System.out.print("\nEnter your choice: ");
+        return scanner.nextLine().toLowerCase();
+    }
 }
