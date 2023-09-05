@@ -10,4 +10,14 @@ public class GameHistory {
 
     public GameHistory() {
         history = new ArrayList<>();
+    }
+    /**
+     * Record a game result to the history.
+     *
+     * @param result The result of the game to be recorded.
+     */
+    public void recordGameResult(String result) {
+        history.add(result);
+    }
+
 }
