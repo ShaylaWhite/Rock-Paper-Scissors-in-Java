@@ -7,7 +7,11 @@ package com.generalassmbly;
  * Inherits from the Player class.
  */
 public class ComputerPlayer extends Player {
-    // Constructor
+    /**
+     * Constructor to initialize a computer player.
+     *
+     * @param name The name of the computer player.
+     */
     public ComputerPlayer(String name) {
         super(name);
     }

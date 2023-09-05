@@ -6,7 +6,11 @@ package com.generalassmbly;
  * Inherits from the Player class.
  */
 public class HumanPlayer extends Player {
-    // Constructor
+    /**
+     * Constructor to initialize a human player.
+     *
+     * @param name The name of the human player.
+     */
     public HumanPlayer(String name) {
         super(name);
     }
