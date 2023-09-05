@@ -14,7 +14,7 @@ Polymorphism:
 -HumanPlayer Class and ComputerPlayer Class: Both classes provide specific implementations of methods defined in the Player class, showcasing polymorphism in action. For example, they can override the makeMove() method differently to represent human and computer player behaviors.
 
 Modularity:
--GameManager Class (Service/Controller Class): Centralizes game logic, including move comparison and outcome determination. This modular approach separates the game's core functionality from other concerns, promoting easier maintenance and testing.
+-com.generalassmbly.GameManager Class (Service/Controller Class): Centralizes game logic, including move comparison and outcome determination. This modular approach separates the game's core functionality from other concerns, promoting easier maintenance and testing.
 -GameMenu Class (Service/Controller Class): Manages the main menu and user interaction separately. By isolating menu-related logic, you ensure that the user interface is decoupled from the game mechanics, enhancing modularity.
 
 
@@ -34,7 +34,7 @@ Class List
 
 6. **Validator:** A utility class for handling input validation and providing methods to validate user input.
 
-7. **GameManager:** A service or controller class responsible for managing the game mechanics, including comparing moves, determining the winner, and handling game outcomes.
+7. **com.generalassmbly.GameManager:** A service or controller class responsible for managing the game mechanics, including comparing moves, determining the winner, and handling game outcomes.
 
 8. **GameMenu:** A service or controller class for managing the main menu and user interactions, such as displaying options and handling user choices.
 
@@ -55,21 +55,21 @@ Create the GameHistory class, which will be responsible for managing the history
 Create Validator Class:
 
 Implement the Validator class, which handles input validation. This class should provide methods to validate user input, ensuring that it's a valid move or menu choice.
-Create GameManager Class:
+Create com.generalassmbly.GameManager Class:
 
-Develop the GameManager class, which manages the core game logic. This class should handle comparing moves, determining the winner, updating player scores, and handling game outcomes.
+Develop the com.generalassmbly.GameManager class, which manages the core game logic. This class should handle comparing moves, determining the winner, updating player scores, and handling game outcomes.
 Create GameMenu Class:
 
 Create the GameMenu class, responsible for managing the main menu and user interactions. This class should have methods for displaying the main menu, getting user choices, and handling user interactions.
 Create App Class (Client/Driver Class):
 
-In the main method of the App class, create instances of the necessary classes, including Player, GameHistory, Validator, GameManager, and GameMenu. This class will serve as the entry point of your program and will orchestrate the game flow.
+In the main method of the App class, create instances of the necessary classes, including Player, GameHistory, Validator, com.generalassmbly.GameManager, and GameMenu. This class will serve as the entry point of your program and will orchestrate the game flow.
 Define Enums (Data Definitions):
 
 Define enums for constants like moves (rock, paper, scissors) and game results (win, lose, tie). These enums can be used throughout the code to represent these constants.
 Implement the Logic and Gameplay:
 
-Implement the specific logic for making moves, determining winners, and managing the game flow in the respective classes. This includes the makeMove() method for human and computer players and the core game logic in the GameManager class.
+Implement the specific logic for making moves, determining winners, and managing the game flow in the respective classes. This includes the makeMove() method for human and computer players and the core game logic in the com.generalassmbly.GameManager class.
 Implement Input Validation:
 
 In the Validator class, implement methods for input validation to ensure that user inputs for moves or menu choices are validated correctly.

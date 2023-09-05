@@ -1,7 +1,8 @@
 package com.generalassmbly;
+
+import java.util.Optional;
 import java.util.Scanner;
 
-// HumanPlayer.java
 /**
  * HumanPlayer.java
  * Represents a human player in the Rock, Paper, Scissors game.
@@ -14,8 +15,10 @@ public class HumanPlayer extends Player {
      * @param name The name of the human player.
      */
     public HumanPlayer(String name) {
-        super(name);
+
+        super(Optional.of(name)); // Convert name to Optional
     }
+
     /**
      * Allows the human player to make a move in the game.
      *
@@ -31,7 +34,7 @@ public class HumanPlayer extends Player {
         String move;
 
         while (true) {
-            System.out.print(getName() + ", enter your move (rock, paper, or scissors): ");
+            System.out.print(getName().orElse("Unknown") + ", enter your move (rock, paper, or scissors): ");
             move = scanner.nextLine().toLowerCase();
 
             if (move.equals("rock") || move.equals("paper") || move.equals("scissors")) {

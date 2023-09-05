@@ -1,5 +1,8 @@
 package com.generalassmbly;
 
+import java.util.Optional;
+import java.util.function.Supplier;
+
 /**
  * Player Class (Abstract Class):
  *
@@ -20,7 +23,7 @@ package com.generalassmbly;
  * provide specific implementations of makeMove(), and they can be treated as Player
  * objects in the game logic, allowing for flexibility and extensibility.
  */
-public class Player {
+public abstract class Player {
     private Optional<String> name; // Optional to represent the possibility of no name
     private int wins;
     private int losses;
@@ -54,12 +57,9 @@ public class Player {
     /**
      * Allows the player to make a move in the game.
      *
-     * @param moveSupplier A Supplier that provides the player's move.
      * @return The move made by the player (rock, paper, or scissors).
      */
-    public String makeMove(Supplier<String> moveSupplier) {
-        return moveSupplier.get();
-    }
+    public abstract String makeMove(); // Abstract method declaration
 
     /**
      * Increment the player's wins count.

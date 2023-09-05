@@ -2,106 +2,79 @@
 # 🪨✂️📄 Rock, Paper, Scissors in Java 🪨✂️📄
 
 ## Overview
-A basic version of the classic game, rock–paper–scissors, that lets you face off against the computer in the console. The game boasts a few key features:
+This console-based implementation of Rock-Paper-Scissors is not just a game; it's a demonstration of Object-Oriented Programming (OOP) principles in action. The game boasts an intuitive Graphical User Interface (GUI) to enhance the user experience. It offers two modes: player vs. player and player vs. computer, and it ensures a user-friendly interface for interactions.
 
-- Play rock–paper–scissors against a computer player.
-- Challenge a friend in a rock–paper–scissors showdown.
-- The computer's choice is determined by a random number generator.
+## Key Features
 
-## 🧩 Class Breakdown and OOP Principles
+### 1. Rock-Paper-Scissors Gameplay
+- Play the traditional Rock-Paper-Scissors game with clear rules and outcomes.
+- Choose between two exciting modes: Human vs. Human or Human vs. Computer.
 
-### 🎮 Main Class (Client/Driver Class):
-- Main method orchestrating game flow.
-- Utilizes other classes to create objects and manage the game.
-- **Usage of OOP:** Control class, Composition (uses other classes).
+### 2. User-Friendly GUI
+- The game includes a graphical user interface that simplifies interactions.
+- The GUI offers options to start a new game, view game history, and quit the application.
 
-### 👤 Player Class (Abstract Class):
-- Represents a player in the game.
-- Holds common attributes and methods for all players.
-- **Usage of OOP:** Inheritance (Abstract class), Encapsulation (data hiding), Polymorphism (serves as a base class for different players).
+### 3. Game History Tracking
+- Keep track of game history, including the results of each match.
+- Easily access and review past game results at any time.
 
-### 🙋‍♂️ HumanPlayer Class (Subclass of Player):
-- Represents a human player.
-- Inherits attributes and methods from the Player class.
-- **Usage of OOP:** Inheritance (Subclass), Method overriding.
+## Object-Oriented Programming (OOP) Principles in Action
 
-### 🤖 ComputerPlayer Class (Subclass of Player):
-- Represents a computer player.
-- Inherits attributes and methods from the Player class.
-- **Usage of OOP:** Inheritance (Subclass), Method overriding.
-
-### 📚 GameHistory Class (Utility Class):
-- Manages the history of the game.
-- Stores past game results.
-- **Usage of OOP:** Encapsulation (data hiding), Data structure (e.g., ArrayList).
-
-### 🧾 Validator Class (Utility Class):
-- Handles input validation.
-- Provides methods to validate user input.
-- **Usage of OOP:** Encapsulation (data hiding), Reusability (reusable validation methods).
-
-### 🎲 GameManager Class (Service/Controller Class):
-- Manages the game mechanics.
-- Compares moves, determines the winner, and handles outcomes.
-- **Usage of OOP:** Encapsulation (data hiding), Modularity (centralized game logic).
-
-### 🍽️ GameMenu Class (Service/Controller Class):
-- Manages the main menu and user interaction.
-- Displays options and handles user choices.
-- **Usage of OOP:** Encapsulation (data hiding), Modularity (separate menu logic).
-
-### 🚀 App Class (Client/Driver Class):
-- Entry point of the program.
-- Initializes the game, creates objects, and starts the game loop.
-- **Usage of OOP:** Control class, Composition (uses other classes).
-
-### 📑 Enum Classes (Data Definitions):
-- Enumerations for constants like moves and game results.
-- **Usage of OOP:** Data abstraction (defining constants).
-
-## 🧩 OOP Principles
-
-### Inheritance:
+### Inheritance
 - **Player Class (Abstract Class):** Represents a player in the game and serves as the base class for other player types. It embodies inheritance by defining common attributes and methods that are shared by both human and computer players.
 - **HumanPlayer Class (Subclass of Player):** Inherits from the Player class, allowing it to reuse the attributes and methods defined in the Player class while also providing the flexibility to override or extend these methods.
 - **ComputerPlayer Class (Subclass of Player):** Similarly inherits from the Player class, leveraging the common player attributes and methods.
 
-### Encapsulation:
+### Encapsulation
 - **Player Class (Abstract Class):** Encapsulates player-specific data (e.g., wins, losses, points) by providing private fields and exposing them through getter and setter methods. This ensures that the internal state of players is hidden and can only be accessed and modified through controlled methods.
 - **Validator Class (Utility Class):** Encapsulates input validation logic by providing methods to validate user input. This hides the validation details from the calling code and promotes code maintainability.
 
-### Polymorphism:
+### Polymorphism
 - **Player Class (Abstract Class):** Serves as a base class for different player types (human and computer). This enables polymorphism, as you can create objects of different player types but interact with them through a common Player reference, allowing for flexibility and extensibility in the game logic.
 - **HumanPlayer Class and ComputerPlayer Class:** Both classes provide specific implementations of methods defined in the Player class, showcasing polymorphism in action. For example, they can override the makeMove() method differently to represent human and computer player behaviors.
 
-### Modularity:
-- **GameManager Class (Service/Controller Class):** Centralizes game logic, including move comparison and outcome determination. This modular approach separates the game's core functionality from other concerns, promoting easier maintenance and testing.
+### Modularity
+- **com.generalassmbly.GameManager Class (Service/Controller Class):** Centralizes game logic, including move comparison and outcome determination. This modular approach separates the game's core functionality from other concerns, promoting easier maintenance and testing.
 - **GameMenu Class (Service/Controller Class):** Manages the main menu and user interaction separately. By isolating menu-related logic, you ensure that the user interface is decoupled from the game mechanics, enhancing modularity.
 
-## ⚙️ Feature Requirements
-- [ ] Main menu with options to enter 2 players or vs. computer.
-- [ ] Human vs. human mode and human vs. computer mode.
-- [ ] Declare the winner at the end of each game.
+## How to Play
+1. Launch the game.
+2. Use the GUI to select your game mode: Human vs. Human or Human vs. Computer.
+3. Follow the on-screen prompts to enter player names and make your moves.
+4. The winner of each round is announced, and game results are logged in the history.
+5. You can view the game history at any time to review past matches.
 
-## ⚙️ Technical Requirements (HARD)
-- [ ] Use classes to remove repetitive parts of code.
-- [ ] Create an abstract Player class to manage the player's state.
-- [ ] Use interfaces where necessary.
-- [ ] Handle invalid user input.
-- [ ] Utilize public, private, and static variables, methods, and members.
-- [ ] Incorporate exception handling with try-catch blocks.
-- [ ] Get standard input with Java using a Scanner.
-- [ ] Use arrays or array lists to store game history.
-- [ ] Add JavaDoc strings and proper comments.
-- [ ] Use Java Optionals and Lambdas.
+## Technical Details
 
-## 🌟 Bonus Ideas
-- [ ] Write automated JUnit tests for your application.
-- [ ] Use an Agile project management framework.
-- [ ] Implement a history feature to display previous game history.
-- [ ] Use Java packages to modularize code.
-- [ ] Use Maven to install external dependencies.
-- [ ] Use generics on collections to store different data composed of different types.
-- [ ] Use multithreading to handle concurrent requests.
+### Input Validation
+- Input validation is implemented to ensure that user inputs for moves and menu choices are valid.
+- Invalid inputs are handled gracefully, with informative error messages.
 
-🔥 Have fun playing Rock, Paper, Scissors game in Java! 🔥
+### Game History
+- The `GameHistory` class stores and manages the history of the game, making it easy to view past results.
+- Game results are presented in a clear format for the user.
+
+### Exception Handling
+- The code incorporates exception handling using try-catch blocks to prevent crashes due to bad input or unexpected issues.
+
+### JavaDoc and Comments
+- JavaDoc strings are provided for classes, methods, and variables to document their purpose and usage.
+- Comments within the code explain key logic and functionality.
+
+## Requirements
+- Java Development Kit (JDK) installed on your system.
+
+## How to Run
+1. Compile the Java source files in the project directory.
+   ```
+javac *.java
+   ```
+2. Run the game by executing the `Main` class.
+   ```
+java Main
+   ```
+
+## Have Fun!
+Enjoy playing Rock-Paper-Scissors with this Java implementation, featuring a user-friendly GUI and a demonstration of essential OOP principles. May the best player win! 🪨✂️📄
+```
+

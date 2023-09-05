@@ -1,5 +1,6 @@
 package com.generalassmbly;
 
+import java.util.Optional;
 import java.util.Random;
 
 /**
@@ -15,7 +16,7 @@ public class ComputerPlayer extends Player {
      * @param name The name of the computer player.
      */
     public ComputerPlayer(String name) {
-        super(name);
+        super(Optional.of(name)); // Convert name to Optional
     }
 
     /**
@@ -32,14 +33,14 @@ public class ComputerPlayer extends Player {
 
         switch (randomMove) {
             case 0:
-                return "✊🏿 Rock (bound)";
+                return "rock";
             case 1:
-                return "✋🏿 Paper (bound)";
+                return "paper";
             case 2:
-                return "✌🏿 Scissors (bound)";
+                return "scissors";
             default:
                 // This should not happen, but handle it just in case
-                return "✊🏿 Rock (bound)";
+                return "rock";
         }
     }
 }

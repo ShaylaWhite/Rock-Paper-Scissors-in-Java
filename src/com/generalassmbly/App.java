@@ -1,5 +1,7 @@
 package com.generalassmbly;
 
+import java.util.Scanner;
+
 public class App {
     public static void main(String[] args) {
         // Create player objects
@@ -9,22 +11,15 @@ public class App {
         // Create a game history manager
         GameHistory gameHistory = new GameHistory();
 
-        // Create a validator for input
-        Validator validator = new Validator();
-
         // Create the game manager
-        GameManager gameManager = new GameManager(player1, player2, gameHistory, validator);
+        GameManager gameManager = new GameManager(player1, player2, gameHistory);
 
         // Create the game menu
-        GameMenu gameMenu = new GameMenu(gameManager, gameHistory);
-
-        // Display the main menu
-        gameMenu.displayMainMenu();
+        new GameMenu(gameManager, gameHistory); // GUI menu, no need to store in a variable
 
         // Start the game loop
         while (true) {
-            String userInput = gameMenu.getUserInput();
-            gameMenu.handleUserChoice(userInput);
+
         }
     }
 }
