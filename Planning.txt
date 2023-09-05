@@ -39,3 +39,57 @@ Class List
 8. **GameMenu:** A service or controller class for managing the main menu and user interactions, such as displaying options and handling user choices.
 
 9. **App:** Another main class that serves as the entry point of the program. It initializes the game, creates objects, and starts the game loop.
+
+[Step By Step]
+
+Create Main: Entry Point
+
+Create Player class: is an abstract class that serves as the base class for all player types in the Rock, Paper, Scissors gam
+
+Create Player Subclasses (HumanPlayer and ComputerPlayer):
+
+You've mentioned that you want two types of players: human and computer. Create two subclasses of the Player class, one for each player type. These subclasses will inherit from the Player class and implement the makeMove() method differently for human and computer players.
+Create GameHistory Class:
+
+Create the GameHistory class, which will be responsible for managing the history of the game. This class should have methods for recording game results, such as wins and losses.
+Create Validator Class:
+
+Implement the Validator class, which handles input validation. This class should provide methods to validate user input, ensuring that it's a valid move or menu choice.
+Create GameManager Class:
+
+Develop the GameManager class, which manages the core game logic. This class should handle comparing moves, determining the winner, updating player scores, and handling game outcomes.
+Create GameMenu Class:
+
+Create the GameMenu class, responsible for managing the main menu and user interactions. This class should have methods for displaying the main menu, getting user choices, and handling user interactions.
+Create App Class (Client/Driver Class):
+
+In the main method of the App class, create instances of the necessary classes, including Player, GameHistory, Validator, GameManager, and GameMenu. This class will serve as the entry point of your program and will orchestrate the game flow.
+Define Enums (Data Definitions):
+
+Define enums for constants like moves (rock, paper, scissors) and game results (win, lose, tie). These enums can be used throughout the code to represent these constants.
+Implement the Logic and Gameplay:
+
+Implement the specific logic for making moves, determining winners, and managing the game flow in the respective classes. This includes the makeMove() method for human and computer players and the core game logic in the GameManager class.
+Implement Input Validation:
+
+In the Validator class, implement methods for input validation to ensure that user inputs for moves or menu choices are validated correctly.
+Implement the Main Menu Loop:
+
+In the main method of the App class, create a loop that displays the main menu, gets user input, and directs the program based on user choices.
+Testing and Exception Handling:
+
+As you implement each component, consider writing unit tests to ensure that they work as expected. Also, add exception handling using try-catch blocks to gracefully handle bad input or other errors.
+Document Your Code:
+
+Add JavaDoc comments to your classes, methods, and variables to document their purpose and usage. Also, add inline comments to explain the logic within your code.
+Ensure Code Organization:
+
+Organize your code into packages and classes as necessary. Use proper naming conventions and maintain a clean and structured codebase.
+Commit and Version Control:
+
+Commit your code changes to version control (e.g., Git) regularly with meaningful commit messages to track your progress and maintain a history of your work.
+Run and Test Your Game:
+
+Run your program and test it to ensure that it works correctly. Debug and fix any issues that you encounter during testing.
+Iterate and Refine:
+
