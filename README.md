@@ -1,4 +1,3 @@
-# Rock-Paper-Scissors-in-Java
 
 # 🪨✂️📄 Rock, Paper, Scissors in Java 🪨✂️📄
 
