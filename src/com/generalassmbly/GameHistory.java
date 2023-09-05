@@ -19,5 +19,14 @@ public class GameHistory {
     public void recordGameResult(String result) {
         history.add(result);
     }
-
+    /**
+     * Display the game history to the console.
+     */
+    public void displayGameHistory() {
+        System.out.println("=== GAME HISTORY ===");
+        for (String gameResult : history) {
+            System.out.println(gameResult);
+        }
+        System.out.println("===================");
+    }
 }
