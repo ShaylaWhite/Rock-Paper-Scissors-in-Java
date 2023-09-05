@@ -20,14 +20,14 @@ package com.generalassmbly;
  * provide specific implementations of makeMove(), and they can be treated as Player
  * objects in the game logic, allowing for flexibility and extensibility.
  */
-public abstract class Player {
-    private String name;
+public class Player {
+    private Optional<String> name; // Optional to represent the possibility of no name
     private int wins;
     private int losses;
     private int points;
 
-    // Constructor
-    public Player(String name) {
+    // Constructor with an Optional name
+    public Player(Optional<String> name) {
         this.name = name;
         this.wins = 0;
         this.losses = 0;
@@ -35,7 +35,7 @@ public abstract class Player {
     }
 
     // Getter methods for player attributes
-    public String getName() {
+    public Optional<String> getName() {
         return name;
     }
 
@@ -51,16 +51,36 @@ public abstract class Player {
         return points;
     }
 
-    // Method to increment wins
+    /**
+     * Allows the player to make a move in the game.
+     *
+     * @param moveSupplier A Supplier that provides the player's move.
+     * @return The move made by the player (rock, paper, or scissors).
+     */
+    public String makeMove(Supplier<String> moveSupplier) {
+        return moveSupplier.get();
+    }
+
+    /**
+     * Increment the player's wins count.
+     */
     public void incrementWins() {
         wins++;
     }
 
-    // Method to increment losses
+    /**
+     * Increment the player's losses count.
+     */
     public void incrementLosses() {
         losses++;
     }
 
-    // Abstract method for making a move
-    public abstract String makeMove();
+    /**
+     * Increment the player's points.
+     *
+     * @param pointsToAdd The number of points to add.
+     */
+    public void incrementPoints(int pointsToAdd) {
+        points += pointsToAdd;
+    }
 }
