@@ -16,3 +16,26 @@ Polymorphism:
 Modularity:
 -GameManager Class (Service/Controller Class): Centralizes game logic, including move comparison and outcome determination. This modular approach separates the game's core functionality from other concerns, promoting easier maintenance and testing.
 -GameMenu Class (Service/Controller Class): Manages the main menu and user interaction separately. By isolating menu-related logic, you ensure that the user interface is decoupled from the game mechanics, enhancing modularity.
+
+
+Class List
+
+## Class List
+
+1. **Main:** The main class containing the main method for running the game.
+
+2. **Player:** An abstract class representing a player in the game. This class should include common attributes and methods for players.
+
+3. **HumanPlayer:** A subclass of Player representing a human player.
+
+4. **ComputerPlayer:** A subclass of Player representing a computer player.
+
+5. **GameHistory:** A utility class for managing the history of the game and storing past game results.
+
+6. **Validator:** A utility class for handling input validation and providing methods to validate user input.
+
+7. **GameManager:** A service or controller class responsible for managing the game mechanics, including comparing moves, determining the winner, and handling game outcomes.
+
+8. **GameMenu:** A service or controller class for managing the main menu and user interactions, such as displaying options and handling user choices.
+
+9. **App:** Another main class that serves as the entry point of the program. It initializes the game, creates objects, and starts the game loop.
