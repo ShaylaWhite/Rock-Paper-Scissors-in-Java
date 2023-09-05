@@ -3,27 +3,32 @@ package com.generalassembly;
 /**
  * Validator Class (Utility Class):
  *
- * Handles input validation and provides methods to validate user input.
+ * Handles input validation.
+ * Provides methods to validate user input.
  * Usage of OOP: Encapsulation (data hiding), Reusability (reusable validation methods).
  */
 public class Validator {
     /**
-     * Validate if a given move (rock, paper, or scissors) is valid.
+     * Validate user input for a move (rock, paper, or scissors).
      *
-     * @param move The move to be validated.
-     * @return True if the move is valid, false otherwise.
+     * @param input The user's input to be validated.
+     * @return true if the input is valid; false otherwise.
      */
-    public boolean validateMove(String move) {
-        return move.equalsIgnoreCase("rock") || move.equalsIgnoreCase("paper") || move.equalsIgnoreCase("scissors");
+    public boolean validateMove(String input) {
+        String sanitizedInput = input.toLowerCase();
+
+        return sanitizedInput.equals("rock") || sanitizedInput.equals("paper") || sanitizedInput.equals("scissors");
     }
 
     /**
-     * Validate if a user's menu choice (e.g., "play", "history", "quit") is valid.
+     * Validate user input for menu choices (e.g., play, history, quit).
      *
-     * @param choice The user's menu choice to be validated.
-     * @return True if the choice is valid, false otherwise.
+     * @param input The user's input to be validated.
+     * @return true if the input is valid; false otherwise.
      */
-    public boolean validateMenuChoice(String choice) {
-        return choice.equalsIgnoreCase("play") || choice.equalsIgnoreCase("history") || choice.equalsIgnoreCase("quit");
+    public boolean validateMenuChoice(String input) {
+        String sanitizedInput = input.toLowerCase();
+
+        return sanitizedInput.equals("play") || sanitizedInput.equals("history") || sanitizedInput.equals("quit");
     }
 }
