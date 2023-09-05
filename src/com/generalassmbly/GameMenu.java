@@ -9,4 +9,10 @@ import java.util.Scanner;
 public class GameMenu {
     private GameManager gameManager;
     private Scanner scanner;
+
+    // Constructor
+    public GameMenu(GameManager gameManager) {
+        this.gameManager = gameManager;
+        this.scanner = new Scanner(System.in);
+    }
 }
