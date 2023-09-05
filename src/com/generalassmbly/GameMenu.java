@@ -29,7 +29,7 @@ public class GameMenu {
         System.out.print("\nEnter your choice: ");
         return scanner.nextLine().toLowerCase();
     }
-}  // Handle user choices
+ // Handle user choices
     public void handleUserChoice(String userInput) {
         switch (userInput) {
             case "play":
