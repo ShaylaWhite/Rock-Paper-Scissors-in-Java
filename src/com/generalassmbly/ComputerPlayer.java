@@ -3,6 +3,6 @@ package com.generalassmbly;
 public class ComputerPlayer extends Player {
     // Constructor
     public ComputerPlayer(String name) {
-
+        super(name);
     }
 }
