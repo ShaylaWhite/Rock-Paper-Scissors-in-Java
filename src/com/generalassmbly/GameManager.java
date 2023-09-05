@@ -31,5 +31,41 @@ public class GameManager {
         // Display the game result to the players
         displayGameResult(humanMove, computerMove, result);
     }
+    // Determine the winner based on the moves
+    private String determineWinner(String humanMove, String computerMove) {
+        if (humanMove.equals(computerMove)) {
+            return "tie";
+        } else if ((humanMove.equals("rock") && computerMove.equals("scissors")) ||
+                (humanMove.equals("scissors") && computerMove.equals("paper")) ||
+                (humanMove.equals("paper") && computerMove.equals("rock"))) {
+            return "win";
+        } else {
+            return "lose";
+        }
+    }
 
+    // Update player scores based on the game result
+    private void updateScores(String result) {
+        if (result.equals("win")) {
+            humanPlayer.incrementWins();
+            computerPlayer.incrementLosses();
+        } else if (result.equals("lose")) {
+            humanPlayer.incrementLosses();
+            computerPlayer.incrementWins();
+        } // In case of a tie, scores remain unchanged
+    }
+
+    // Display the game result to the players
+    private void displayGameResult(String humanMove, String computerMove, String result) {
+        System.out.println("You chose: " + humanMove);
+        System.out.println("Computer chose: " + computerMove);
+
+        if (result.equals("tie")) {
+            System.out.println("It's a tie!");
+        } else if (result.equals("win")) {
+            System.out.println("You win!");
+        } else {
+            System.out.println("Computer wins!");
+        }
+    }
 }
