@@ -15,9 +15,11 @@ public class GameMenu {
      * Constructs a GameMenu object.
      *
      * @param gameManager The GameManager instance that manages game logic.
+     * @param gameHistory The GameHistory instance to track game history.
      */
-    public GameMenu(GameManager gameManager) {
+    public GameMenu(GameManager gameManager, GameHistory gameHistory) {
         this.gameManager = gameManager;
+        this.gameHistory = gameHistory;
         this.scanner = new Scanner(System.in);
     }
 
@@ -31,6 +33,7 @@ public class GameMenu {
         System.out.println("2. Type 'history' to view your game history.");
         System.out.println("3. Type 'quit' to stop playing.");
     }
+
     /**
      * Gets user input for menu choices.
      *
@@ -40,6 +43,7 @@ public class GameMenu {
         System.out.print("\nEnter your choice: ");
         return scanner.nextLine().toLowerCase();
     }
+
     /**
      * Handles user choices based on their input.
      *
@@ -51,7 +55,7 @@ public class GameMenu {
                 gameManager.playGame();
                 break;
             case "history":
-                gameHistory.displayGameHistory(); // Call the method on the gameHistory object
+                gameHistory.displayGameHistory();
                 break;
             case "quit":
                 System.out.println("Thanks for playing!");
