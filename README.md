@@ -82,7 +82,6 @@ The game offers an effortless and engaging user interface that enhances your gam
 ## Requirements
 - Java Development Kit (JDK) installed on your system.
 
-Your instructions look good! However, to enhance clarity, consider adding code blocks and revising slightly:
 
 ## How to Run
 
