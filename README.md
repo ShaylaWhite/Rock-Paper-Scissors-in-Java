@@ -10,7 +10,6 @@ This console-based implementation of Rock-Paper-Scissors is not just a game; it'
 - Play the traditional Rock-Paper-Scissors game with clear rules and outcomes.
 - Choose between two exciting modes: Human vs. Human or Human vs. Computer. Computer vs. Computer
 
-Certainly, here's the improved version:
 
 ### 2. User-Friendly GUI
 - Enjoy seamless interactions with the game's intuitive graphical user interface.
@@ -83,17 +82,25 @@ The game offers an effortless and engaging user interface that enhances your gam
 ## Requirements
 - Java Development Kit (JDK) installed on your system.
 
+Your instructions look good! However, to enhance clarity, consider adding code blocks and revising slightly:
+
 ## How to Run
-1. Compile the Java source files in the project directory.
+
+1. **Compilation**: Compile the Java source files in the project directory using the following command:
+   
    ```
-javac *.java
+   javac *.java
    ```
-2. Run the game by executing the `Main` class.
+
+2. **Execution**: Run the game by executing the `Main` class:
+
    ```
-java Main
+   java Main
    ```
 
 ## Have Fun!
+
 Enjoy playing Rock-Paper-Scissors with this Java implementation, featuring a user-friendly GUI and a demonstration of essential OOP principles. May the best player win! 🪨✂️📄
-```
+
+
 
