@@ -50,4 +50,6 @@ public abstract class Player {
     public int getPoints() {
         return points;
     }
+
+    public abstract String makeMove();
 }
