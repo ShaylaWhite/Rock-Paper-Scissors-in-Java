@@ -51,5 +51,9 @@ public abstract class Player {
         return points;
     }
 
+    public void incrementWins() {
+        wins++;
+    }
+
     public abstract String makeMove();
 }

@@ -19,9 +19,11 @@ public class GameHistory {
      *
      * @param result The result of the game to be recorded.
      */
-    public void recordGameResult(String result) {
-        history.add(result);
+    public void recordGameResult(String player1Name, String player2Name, String result) {
+        String gameResult = player1Name + " vs. " + player2Name + ": " + result;
+        history.add(gameResult);
     }
+
     /**
      * Display the game history to the console.
      */

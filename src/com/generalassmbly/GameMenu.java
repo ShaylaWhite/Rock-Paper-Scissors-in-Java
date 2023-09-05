@@ -8,6 +8,7 @@ import java.util.Scanner;
  */
 public class GameMenu {
     private GameManager gameManager;
+    private GameHistory gameHistory;
     private Scanner scanner;
 
     /**
@@ -50,7 +51,7 @@ public class GameMenu {
                 gameManager.playGame();
                 break;
             case "history":
-                gameManager.displayGameHistory();
+                gameHistory.displayGameHistory(); // Call the method on the gameHistory object
                 break;
             case "quit":
                 System.out.println("Thanks for playing!");
