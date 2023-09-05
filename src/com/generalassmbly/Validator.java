@@ -1,5 +1,4 @@
-package com.generalassembly;
-
+package com.generalassmbly;
 /**
  * Validator Class (Utility Class):
  *
