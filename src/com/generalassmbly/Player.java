@@ -20,5 +20,16 @@ package com.generalassmbly;
  * provide specific implementations of makeMove(), and they can be treated as Player
  * objects in the game logic, allowing for flexibility and extensibility.
  */
-public class Player {
-}
+public abstract class Player {
+    private String name;
+    private int wins;
+    private int losses;
+    private int points;
+
+    // Constructor
+    public Player(String name) {
+        this.name = name;
+        this.wins = 0;
+        this.losses = 0;
+        this.points = 0;
+    }
