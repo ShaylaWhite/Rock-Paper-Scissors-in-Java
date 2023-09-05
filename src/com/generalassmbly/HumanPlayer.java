@@ -14,4 +14,29 @@ public class HumanPlayer extends Player {
     public HumanPlayer(String name) {
         super(name);
     }
+    /**
+     * Allows the human player to make a move in the game.
+     *
+     * @return The move made by the human player (rock, paper, or scissors).
+     */
+    @Override
+    public String makeMove() {
+        // Implement code to get user input for the move (rock, paper, scissors)
+        // You can use the Scanner class here
+        // Validate the input to ensure it's a valid move
+
+        Scanner scanner = new Scanner(System.in);
+        String move;
+
+        while (true) {
+            System.out.print(getName() + ", enter your move (rock, paper, or scissors): ");
+            move = scanner.nextLine().toLowerCase();
+
+            if (move.equals("rock") || move.equals("paper") || move.equals("scissors")) {
+                return move;
+            } else {
+                System.out.println("Invalid move. Please enter 'rock', 'paper', or 'scissors'.");
+            }
+        }
+    }
 }
