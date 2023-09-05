@@ -2,17 +2,36 @@
 # 🪨✂️📄 Rock, Paper, Scissors in Java 🪨✂️📄
 
 ## Overview
-This console-based implementation of Rock-Paper-Scissors is not just a game; it's a demonstration of Object-Oriented Programming (OOP) principles in action. The game boasts an intuitive Graphical User Interface (GUI) to enhance the user experience. It offers two modes: player vs. player and player vs. computer, and it ensures a user-friendly interface for interactions.
+This console-based implementation of Rock-Paper-Scissors is not just a game; it's a demonstration of Object-Oriented Programming (OOP) principles in action. The game boasts an intuitive Graphical User Interface (GUI) to enhance the user experience. It offers three modes: player vs. player and player vs. computer, computer vs. coomputer and it ensures a user-friendly interface for interactions.
 
 ## Key Features
 
 ### 1. Rock-Paper-Scissors Gameplay
 - Play the traditional Rock-Paper-Scissors game with clear rules and outcomes.
-- Choose between two exciting modes: Human vs. Human or Human vs. Computer.
+- Choose between two exciting modes: Human vs. Human or Human vs. Computer. Computer vs. Computer
+
+Certainly, here's the improved version:
 
 ### 2. User-Friendly GUI
-- The game includes a graphical user interface that simplifies interactions.
-- The GUI offers options to start a new game, view game history, and quit the application.
+- Enjoy seamless interactions with the game's intuitive graphical user interface.
+- Easily navigate through options to start a new game, review game history, and exit the application.
+
+The game offers an effortless and engaging user interface that enhances your gaming experience. Here, take a closer look at how it works:
+
+#### Interactive Pop-Up UI for Immersive Gameplay
+![GUI](https://github.com/ShaylaWhite/Rock-Paper-Scissors-in-Java/raw/main/src/com/generalassmbly/images/gui.png)
+
+#### Enter Your Name Directly in the Interface!
+![Player Input](https://github.com/ShaylaWhite/Rock-Paper-Scissors-in-Java/raw/main/src/com/generalassmbly/images/playerinput.png)
+
+#### Choose Your Game Mode from Three Options:
+![Game Mode](https://github.com/ShaylaWhite/Rock-Paper-Scissors-in-Java/raw/main/src/com/generalassmbly/images/game%20mode.png)
+
+### But that's not all! After every exhilarating round, you have the power to decide whether to keep the excitement going.
+![Another Round](https://github.com/ShaylaWhite/Rock-Paper-Scissors-in-Java/raw/main/src/com/generalassmbly/images/anotherround.png)
+
+#### This polished presentation enhances your overall experience, making the game even more enjoyable. Have a blast!
+
 
 ### 3. Game History Tracking
 - Keep track of game history, including the results of each match.
