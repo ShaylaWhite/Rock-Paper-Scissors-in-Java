@@ -32,14 +32,14 @@ public class ComputerPlayer extends Player {
 
         switch (randomMove) {
             case 0:
-                return "rock";
+                return "✊🏿 Rock (bound)";
             case 1:
-                return "paper";
+                return "✋🏿 Paper (bound)";
             case 2:
-                return "scissors";
+                return "✌🏿 Scissors (bound)";
             default:
                 // This should not happen, but handle it just in case
-                return "rock";
+                return "✊🏿 Rock (bound)";
         }
     }
 }
