@@ -1,5 +1,7 @@
 package com.generalassmbly;
 import java.util.ArrayList;
+import java.util.List;
+
 /**
  * GameHistory Class (Utility Class):
  *
