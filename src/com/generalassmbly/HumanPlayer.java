@@ -24,7 +24,7 @@ public class HumanPlayer extends Player {
     @Override
     public String makeMove() {
         // Implement code to get user input for the move (rock, paper, scissors)
-        // You can use the Scanner class here
+        // Scanner class here
         // Validate the input to ensure it's a valid move
 
         Scanner scanner = new Scanner(System.in);
