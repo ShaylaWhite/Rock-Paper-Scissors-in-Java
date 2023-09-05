@@ -10,13 +10,19 @@ public class GameMenu {
     private GameManager gameManager;
     private Scanner scanner;
 
-    // Constructor
+    /**
+     * Constructs a GameMenu object.
+     *
+     * @param gameManager The GameManager instance that manages game logic.
+     */
     public GameMenu(GameManager gameManager) {
         this.gameManager = gameManager;
         this.scanner = new Scanner(System.in);
     }
 
-    // Display the main menu options
+    /**
+     * Displays the main menu options to the user.
+     */
     public void displayMainMenu() {
         System.out.println("\nMAIN MENU");
         System.out.println("=====");
@@ -24,12 +30,20 @@ public class GameMenu {
         System.out.println("2. Type 'history' to view your game history.");
         System.out.println("3. Type 'quit' to stop playing.");
     }
-    // Get user input
+    /**
+     * Gets user input for menu choices.
+     *
+     * @return The user's menu choice as a String.
+     */
     public String getUserInput() {
         System.out.print("\nEnter your choice: ");
         return scanner.nextLine().toLowerCase();
     }
- // Handle user choices
+    /**
+     * Handles user choices based on their input.
+     *
+     * @param userInput The user's menu choice.
+     */
     public void handleUserChoice(String userInput) {
         switch (userInput) {
             case "play":
