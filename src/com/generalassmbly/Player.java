@@ -51,9 +51,16 @@ public abstract class Player {
         return points;
     }
 
+    // Method to increment wins
     public void incrementWins() {
         wins++;
     }
 
+    // Method to increment losses
+    public void incrementLosses() {
+        losses++;
+    }
+
+    // Abstract method for making a move
     public abstract String makeMove();
 }
