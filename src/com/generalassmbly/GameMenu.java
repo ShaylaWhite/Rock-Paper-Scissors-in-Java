@@ -15,4 +15,13 @@ public class GameMenu {
         this.gameManager = gameManager;
         this.scanner = new Scanner(System.in);
     }
+
+    // Display the main menu options
+    public void displayMainMenu() {
+        System.out.println("\nMAIN MENU");
+        System.out.println("=====");
+        System.out.println("1. Type 'play' to play.");
+        System.out.println("2. Type 'history' to view your game history.");
+        System.out.println("3. Type 'quit' to stop playing.");
+    }
 }
